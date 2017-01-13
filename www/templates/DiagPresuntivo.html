@@ -1,0 +1,160 @@
+<ion-header-bar class="bar bar-header bar-calm">
+    <h1 class="title">Diagnostica</h1>
+    <a href="#/Alarma" class="button button-icon icon ion-ios-arrow-right" ng-hide="resultado.principal < 2"></a>
+</ion-header-bar>
+
+<ion-content class="color-fase1">
+
+    <div>
+
+        <ul class="list-borderless">
+
+            <div class="item item-divider">
+                <h2 class="title">
+                    <span class="fa fa-stethoscope fa-lg"></span>
+                    Sintomas principales
+                    </h2>
+            </div>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Vive o procede de zonas endemicas</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.uno" ng-change="Sumatoria('principal', 'uno')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle">
+
+                <p>Fiebre</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.dos" ng-change="Sumatoria('principal', 'dos')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+        </ul>
+
+        <ul class="list-borderless" ng-hide="resultado.principal < 2">
+
+            <div class="item item-divider">
+                <h2>
+                    <span class="fa fa-medkit fa-lg"></span>
+                    Sintomas secundarios
+                </h2>
+            </div>
+
+            <li class="item item-toggle">
+
+                <p>Malestar general</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="secundario.uno" ng-change="Sumatoria('secundario', 'uno')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle">
+
+                <p>Anorexia</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="secundario.dos" ng-change="Sumatoria('secundario', 'dos')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle">
+
+                <p>Anorexia</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="secundario.tres" ng-change="Sumatoria('secundario', 'tres')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Dolor (Muscular, articular, cefalea, etc)</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="secundario.cuatro" ng-change="Sumatoria('secundario', 'cuatro')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Rash</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="secundario.cinco" ng-change="Sumatoria('secundario', 'cinco')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Leucopenia</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="secundario.seis" ng-change="Sumatoria('secundario', 'seis')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Prueba de torniquete positivo</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="secundario.siete" ng-change="Sumatoria('secundario', 'siete')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+        </ul>
+
+
+        <div class="list-borderless">
+            <div class="item item-body">
+                <label>Diagnosticos elegidos</label>
+                <h3 class="title">Principales:{{resultado.principal}}</h3>
+                <h3 class="title">Secundarios:{{resultado.secundario}}</h3>
+            </div>
+        </div>
+
+    </div>
+
+</ion-content>

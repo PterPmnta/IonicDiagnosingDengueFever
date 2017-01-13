@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+
+.altura-caja {
+    height: 100%;
+}
+
+.texto-justificado {
+    text-align: justify;
+}
+
+.texto-italic {
+    font-style: italic;
+}
+
+.texto-negrita {
+    font-size: 500;
+}
+
+.item {
+    background-color: #3A4750;
+}
+
+.item p,
+h3 {
+    color: #fff;
+}
+
+.item h2,
+label {
+    color: #11c1f3;
+}
+
+.color-fase1 {
+    background-color: #3A4750;
+}

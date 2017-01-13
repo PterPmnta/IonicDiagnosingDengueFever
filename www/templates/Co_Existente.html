@@ -1,0 +1,136 @@
+<ion-header-bar class="bar bar-header bar-calm">
+    <a href="#/Alarma" class="button button-icon icon ion-ios-arrow-back"></a>
+    <h1 class="title">Diagnostica</h1>
+    <i class="button button-icon icon ion-ios-arrow-right" ng-click="siguienteNivel()"></i>
+</ion-header-bar>
+
+<ion-content class="color-fase1">
+
+    <div>
+
+        <ul class="list-borderless">
+
+            <div class="item item-divider">
+                <h2>
+                    <span class="fa fa-plus-square fa-lg"></span>
+                    Condicion Co-existente
+                </h2>
+            </div>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Embarazo</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.uno" ng-change="Sumatoria('principal', 'uno')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle">
+
+                <p>Menor de 5 años o Mayor de 65 años</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.dos" ng-change="Sumatoria('principal', 'dos')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Enfermedad cronica</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.tres" ng-change="Sumatoria('principal', 'tres')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Riesgo Social</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.cuatro" ng-change="Sumatoria('principal', 'cuatro')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Vivir solo</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.cinco" ng-change="Sumatoria('principal', 'cinco')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Dificil acceso al hospital</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.seis" ng-change="Sumatoria('principal', 'seis')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Pobreza extrema</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.siete" ng-change="Sumatoria('principal', 'siete')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Otros</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.ocho" ng-change="Sumatoria('principal', 'ocho')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+
+        </ul>
+
+        <div class="list-borderless">
+            <div class="item item-body">
+                <label>Condiciones elegidas</label>
+                <h3 class="title">Cantidad:{{resultado.principal}}</h3>
+            </div>
+        </div>
+
+    </div>
+
+</ion-content>

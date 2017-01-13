@@ -1,0 +1,161 @@
+<ion-header-bar class="bar bar-header bar-calm">
+    <a href="#/Presuntivo" class="button button-icon icon ion-ios-arrow-back"></a>
+    <h1 class="title">Diagnostica</h1>
+    <i class="button button-icon icon ion-ios-arrow-right" ng-click="siguienteNivel()"></i>
+</ion-header-bar>
+
+<ion-content class="color-fase1">
+
+    <div>
+
+        <ul class="list-borderless">
+
+            <div class="item item-divider">
+                <h2>
+                    <span class="fa fa-ambulance fa-lg"></span>
+                    Signos de Alarma
+                </h2>
+            </div>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Dolor abdominal intenso y continuo</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.uno" ng-change="Sumatoria('principal', 'uno')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle">
+
+                <p>Vomitos permitentes, diarrea</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.dos" ng-change="Sumatoria('principal', 'dos')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Perdida de liquidos al espacio extravascular</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.tres" ng-change="Sumatoria('principal', 'tres')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Sangrado de mucosas</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.cuatro" ng-change="Sumatoria('principal', 'cuatro')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Somnolencia y/o irritabilidad</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.cinco" ng-change="Sumatoria('principal', 'cinco')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Hepatomegalia dolorosa mayor a 2cm</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.seis" ng-change="Sumatoria('principal', 'seis')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Incremento del hematocrito concomitante con rapida disminucion del conteo de plaquetas</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.siete" ng-change="Sumatoria('principal', 'siete')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Disminucion de diuresis</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.ocho" ng-change="Sumatoria('principal', 'ocho')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Hipotermia</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.nueve" ng-change="Sumatoria('principal', 'nueve')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+            <li class="item item-toggle item-text-wrap">
+
+                <p>Lipotimias</p>
+
+                <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="principal.diez" ng-change="Sumatoria('principal', 'diez')">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+
+            </li>
+
+        </ul>
+
+        <div class="list-borderless">
+            <div class="item item-body">
+                <label>Signos elegidos</label>
+                <h3 class="title">Cantidad:{{resultado.principal}}</h3>
+            </div>
+        </div>
+
+    </div>
+
+</ion-content>
